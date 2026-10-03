@@ -1,0 +1,548 @@
+/* =========================================================
+   ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *:after {
+        transition: none !important;
+    }
+}
+
+
+/* =========================================================
+   PÁGINA DE CADASTRO DE VOLUNTÁRIOS
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER / LOGO
+   ========================================================= */
+
+.site-header .logo a {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.site-header .logo a::before {
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+
+    border-radius: 50% 50% 50% 12px;
+
+    background: var(--green);
+    color: white;
+
+    content: "e";
+
+    font-family: var(--serif);
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.site-header .nav-links a[href="cadastro.html"] {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   CABEÇALHO DA PÁGINA
+   ========================================================= */
+
+.page-header {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 76px 24px 67px;
+
+    background: #eff0e8;
+
+    text-align: center;
+}
+
+.page-header::after {
+    position: absolute;
+    top: -94px;
+    right: calc(50% - 510px);
+
+    width: 230px;
+    height: 230px;
+
+    border: 1px solid #d9e1cd;
+    border-radius: 50%;
+
+    content: "";
+}
+
+
+/* =========================================================
+   LABEL DO CABEÇALHO
+   ========================================================= */
+
+.page-header .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--green);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.page-header .section-label::before {
+    width: 25px;
+    height: 1px;
+
+    background: #87a568;
+
+    content: "";
+}
+
+
+/* =========================================================
+   TÍTULO DO CABEÇALHO
+   ========================================================= */
+
+.page-header h1 {
+    margin: 16px 0 12px;
+
+    font-family: var(--display);
+    font-size: clamp(42px, 5vw, 58px);
+    font-weight: 600;
+    letter-spacing: -2.5px;
+    line-height: 1.1;
+}
+
+.page-header p {
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SEÇÃO DO FORMULÁRIO
+   ========================================================= */
+
+.form-section {
+    padding: 64px 24px 90px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.form-section form {
+    width: min(760px, 100%);
+
+    margin: 0 auto;
+    padding: 42px 48px 46px;
+
+    border: 1px solid #e8e9e1;
+    border-radius: 5px;
+
+    background: var(--paper);
+
+    box-shadow: 0 18px 55px #1b30230c;
+}
+
+
+/* =========================================================
+   FIELDSETS
+   ========================================================= */
+
+.form-section fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 18px;
+
+    min-width: 0;
+
+    margin: 0 0 28px;
+    padding: 0 0 28px;
+
+    border: 0;
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   LEGEND
+   ========================================================= */
+
+.form-section legend {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 0;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.form-section legend::before {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+    margin: 0 11px 2px 0;
+
+    border-radius: 50%;
+
+    background: #91ad6b;
+
+    content: "";
+}
+
+
+/* =========================================================
+   GRUPOS DO FORMULÁRIO
+   ========================================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    min-width: 0;
+}
+
+.form-group label {
+    color: #34453d;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUTS, SELECT E TEXTAREA
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 47px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #dfe3d9;
+    border-radius: 3px;
+    outline: none;
+
+    background: #fff;
+    color: var(--ink);
+
+    font: 400 13px var(--sans);
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.form-group textarea {
+    min-height: 136px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa39b;
+}
+
+
+/* =========================================================
+   ESTADO DE FOCO
+   ========================================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #729675;
+
+    box-shadow: 0 0 0 3px #285b4815;
+}
+
+
+/* =========================================================
+   VALIDAÇÃO
+   ========================================================= */
+
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #c67468;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.form-group select {
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235c6962' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+
+    padding-right: 38px;
+}
+
+
+/* =========================================================
+   AJUSTE DO TERCEIRO FIELDSET
+   ========================================================= */
+
+.form-section fieldset:nth-of-type(3) .form-group:last-child {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin: 1px 0 25px;
+}
+
+.form-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    margin: 2px 0 0;
+
+    accent-color: var(--green);
+
+    flex: 0 0 auto;
+}
+
+.form-checkbox label {
+    max-width: 580px;
+
+    color: #68756e;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   BOTÃO DO FORMULÁRIO
+   ========================================================= */
+
+.form-section form > .button {
+    min-width: 190px;
+
+    cursor: pointer;
+
+    font-family: var(--sans);
+}
+
+
+/* =========================================================
+   MENSAGEM DO FORMULÁRIO
+   ========================================================= */
+
+#form-message {
+    margin: 14px 0 0;
+
+    color: var(--green);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer .footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+
+    width: min(1160px, calc(100% - 64px));
+
+    margin: 0 auto;
+    padding: 45px 0 35px;
+}
+
+
+/* =========================================================
+   TÍTULO DO FOOTER
+   ========================================================= */
+
+.site-footer .footer-content h2 {
+    margin: 0 0 5px;
+
+    color: #fff;
+
+    font-family: var(--display);
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   TEXTO DO FOOTER
+   ========================================================= */
+
+.site-footer .footer-content p {
+    margin: 0;
+
+    color: #bdc8bf;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTATO DO FOOTER
+   ========================================================= */
+
+.site-footer .footer-content address {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    color: #bdc8bf;
+
+    font-size: 12px;
+    font-style: normal;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.site-footer .copyright {
+    margin: 0;
+    padding: 16px 24px;
+
+    border-top: 1px solid #ffffff20;
+
+    color: #a8b4aa;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    /* Cabeçalho */
+
+    .page-header {
+        padding: 57px 20px 49px;
+    }
+
+    .page-header h1 {
+        font-size: 44px;
+    }
+
+
+    /* Formulário */
+
+    .form-section {
+        padding: 38px 16px 62px;
+    }
+
+    .form-section form {
+        padding: 29px 21px 31px;
+    }
+
+    .form-section fieldset {
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    .form-section legend {
+        margin-bottom: 17px;
+    }
+
+    .form-section fieldset:nth-of-type(3) .form-group:last-child {
+        grid-column: auto;
+    }
+
+    .form-section form > .button {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .site-footer .footer-content {
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+        gap: 22px;
+
+        padding: 37px 0 29px;
+    }
+
+    .site-footer .copyright {
+        line-height: 1.7;
+    }
+}

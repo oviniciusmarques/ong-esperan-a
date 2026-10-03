@@ -1,0 +1,1132 @@
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --ink: #192d27;
+    --green: #285b48;
+    --green-dark: #1e4939;
+    --lime: #d8ed9b;
+    --cream: #f7f6f0;
+    --paper: #fffefa;
+    --muted: #68766e;
+    --line: #e6e8df;
+
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "DM Sans", Arial, sans-serif;
+    --display: "Manrope", "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1160px, calc(100% - 64px));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: -9999px;
+    z-index: 20;
+
+    padding: 10px 16px;
+
+    background: #fff;
+}
+
+.skip-link:focus {
+    left: 8px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    height: 88px;
+
+    border-bottom: 1px solid rgba(25, 45, 39, 0.08);
+
+    background: rgba(247, 246, 240, 0.96);
+}
+
+.navbar {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   MARCA / LOGO
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--display);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50% 50% 50% 12px;
+
+    background: var(--green);
+    color: #fff;
+
+    font-family: var(--serif);
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.brand small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-family: var(--sans);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.brand-dot {
+    color: #8bb757;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #5c6962;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    min-height: 54px;
+    padding: 0 23px;
+
+    border: 1px solid var(--green);
+    border-radius: 4px;
+
+    background: var(--green);
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.button:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.button-small {
+    min-height: 43px;
+    padding-inline: 17px;
+
+    gap: 13px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 0.94fr 1.06fr;
+    gap: 72px;
+    align-items: center;
+
+    padding-top: 66px;
+    padding-bottom: 82px;
+}
+
+.hero-copy {
+    padding: 20px 0 0 25px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--green);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.eyebrow-line {
+    display: inline-block;
+
+    width: 27px;
+    height: 1px;
+
+    background: #87a568;
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.hero h1,
+.about h2,
+.mission h2,
+.join h2 {
+    margin: 24px 0 18px;
+
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -2.8px;
+    line-height: 1.08;
+}
+
+.hero h1 {
+    max-width: 510px;
+
+    font-size: clamp(48px, 5.1vw, 70px);
+}
+
+h1 em,
+h2 em {
+    color: var(--green);
+
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   TEXTOS DO HERO
+   ========================================================= */
+
+.hero-copy > p,
+.about-copy > p,
+.join-copy > p {
+    max-width: 470px;
+
+    color: #68756e;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   AÇÕES DO HERO
+   ========================================================= */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+
+    margin-top: 31px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--green);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.text-link span {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   AVISO / DESTAQUE DO HERO
+   ========================================================= */
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 43px;
+
+    color: #778078;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.hero-note strong {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.note-icon {
+    width: 33px;
+    height: 33px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e8eddb;
+    color: var(--green);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   IMAGEM DO HERO
+   ========================================================= */
+
+.hero-visual {
+    position: relative;
+
+    height: 500px;
+
+    padding: 0 0 24px 24px;
+}
+
+.hero-visual::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 68%;
+    height: 63%;
+
+    background: #dfe8cf;
+
+    content: "";
+}
+
+.hero-visual img {
+    position: relative;
+    z-index: 1;
+
+    border-radius: 2px 2px 2px 75px;
+}
+
+
+/* =========================================================
+   LEGENDA DA IMAGEM
+   ========================================================= */
+
+.image-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 14px 18px;
+
+    background: var(--paper);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    box-shadow: 0 6px 24px #14261a12;
+}
+
+.caption-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #8db45c;
+}
+
+.hero-deco {
+    position: absolute;
+    top: -25px;
+    right: -14px;
+    z-index: 2;
+
+    color: #8ba86c;
+
+    font-size: 54px;
+    font-weight: 200;
+}
+
+
+/* =========================================================
+   ÁREAS DE ATUAÇÃO
+   ========================================================= */
+
+.impact-strip {
+    background: #eff0e8;
+
+    border-block: 1px solid #e7e8df;
+}
+
+.impact-inner {
+    display: grid;
+    grid-template-columns: 1.7fr repeat(3, 1fr);
+    align-items: center;
+
+    min-height: 119px;
+}
+
+.impact-inner > p {
+    margin: 0;
+
+    color: #738077;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.impact-inner > p strong {
+    color: var(--ink);
+
+    font-size: 14px;
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding-left: 26px;
+
+    border-left: 1px solid #d9ddd2;
+}
+
+.impact-item span {
+    color: #89a36b;
+
+    font-family: var(--serif);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.impact-item strong {
+    font-family: var(--display);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+
+/* =========================================================
+   SOBRE NÓS
+   ========================================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+
+    height: 440px;
+
+    padding: 0 20px 20px 0;
+}
+
+.about-image::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    width: 73%;
+    height: 70%;
+
+    background: #e5eadb;
+
+    content: "";
+}
+
+.about-image img {
+    border-radius: 3px 65px 3px 3px;
+}
+
+.image-tag {
+    position: absolute;
+    left: -18px;
+    bottom: 3px;
+
+    padding: 14px 20px;
+
+    background: var(--green);
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.about-copy {
+    padding-right: 15px;
+}
+
+.about h2,
+.join h2 {
+    font-size: clamp(38px, 4vw, 52px);
+}
+
+.about-copy > p {
+    font-size: 14px;
+}
+
+.dark-link {
+    margin-top: 14px;
+}
+
+
+/* =========================================================
+   MISSÃO
+   ========================================================= */
+
+.mission {
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--green);
+    color: white;
+}
+
+.mission-inner {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+
+    min-height: 260px;
+}
+
+.eyebrow-light {
+    color: #d4e8b2;
+}
+
+.eyebrow-light .eyebrow-line {
+    background: #c7df9a;
+}
+
+.mission h2 {
+    margin: 21px 0 0;
+
+    font-size: clamp(40px, 4.5vw, 58px);
+}
+
+.mission h2 em {
+    color: var(--lime);
+}
+
+.mission-inner > p {
+    max-width: 410px;
+
+    margin: 20px 0 0;
+
+    color: #e1e9e2;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.mission-spark {
+    position: absolute;
+    right: -10px;
+    top: -53px;
+
+    color: #ffffff0c;
+
+    font-size: 230px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FAÇA PARTE
+   ========================================================= */
+
+.join {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.join-card {
+    display: grid;
+    grid-template-columns: 1fr 0.92fr;
+
+    min-height: 410px;
+
+    overflow: hidden;
+
+    background: #e9eddf;
+}
+
+.join-copy {
+    align-self: center;
+
+    padding: 56px 66px;
+}
+
+.join h2 {
+    margin-top: 20px;
+
+    font-size: clamp(39px, 4vw, 53px);
+}
+
+.join-copy > p {
+    margin-bottom: 27px;
+
+    font-size: 14px;
+}
+
+.join-card > img {
+    min-height: 410px;
+
+    object-position: center 43%;
+}
+
+.button-light {
+    border-color: var(--green);
+    background: var(--green);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #182d26;
+    color: #f5f5ed;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+
+    padding-top: 54px;
+    padding-bottom: 45px;
+}
+
+.brand-footer {
+    color: white;
+}
+
+.brand-footer .brand-mark {
+    background: #d8ed9b;
+    color: var(--green);
+}
+
+.brand-footer small {
+    color: #a7b3aa;
+}
+
+.footer-message {
+    margin: 0;
+
+    color: #e5eadf;
+
+    font-family: var(--serif);
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.footer-main address {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    color: #bdc8bf;
+
+    font-size: 12px;
+    font-style: normal;
+}
+
+.footer-main address strong {
+    margin-bottom: 5px;
+
+    color: #f4f4ed;
+
+    font-size: 13px;
+}
+
+.footer-main address a:hover {
+    color: var(--lime);
+}
+
+
+/* =========================================================
+   RODAPÉ INFERIOR
+   ========================================================= */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 17px;
+    padding-bottom: 19px;
+
+    border-top: 1px solid #ffffff20;
+
+    color: #a8b4aa;
+
+    font-size: 10px;
+}
+
+.heart {
+    color: #b6d77f;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(100% - 42px, 700px);
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+
+        padding-top: 55px;
+    }
+
+    .hero-copy {
+        padding-left: 0;
+    }
+
+    .hero-visual {
+        height: 420px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 6vw, 59px);
+    }
+
+
+    /* Sobre */
+
+    .about {
+        gap: 50px;
+    }
+
+    .about-image {
+        height: 380px;
+    }
+
+
+    /* Impacto */
+
+    .impact-inner {
+        grid-template-columns: 1.4fr repeat(3, 1fr);
+    }
+
+    .impact-item {
+        gap: 9px;
+        padding-left: 14px;
+    }
+
+
+    /* Missão */
+
+    .mission-inner {
+        gap: 35px;
+    }
+
+
+    /* Faça parte */
+
+    .join-copy {
+        padding: 42px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+
+    /* Header */
+
+    .site-header {
+        height: 72px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+
+        font-size: 23px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .button-small {
+        min-height: 40px;
+
+        padding-inline: 12px;
+
+        font-size: 10px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 38px;
+
+        padding-top: 44px;
+        padding-bottom: 52px;
+    }
+
+    .hero-copy {
+        padding-top: 0;
+    }
+
+    .hero h1 {
+        max-width: 440px;
+
+        margin-top: 19px;
+
+        font-size: clamp(46px, 12vw, 62px);
+        letter-spacing: -2.2px;
+    }
+
+    .hero-copy > p {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        gap: 18px;
+    }
+
+    .hero-note {
+        margin-top: 29px;
+    }
+
+    .hero-visual {
+        height: 360px;
+
+        margin-right: 9px;
+
+        padding-left: 16px;
+    }
+
+    .image-caption {
+        padding: 12px;
+
+        font-size: 9px;
+    }
+
+    .hero-deco {
+        right: -18px;
+    }
+
+
+    /* Áreas de atuação */
+
+    .impact-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .impact-inner > p {
+        grid-column: 1 / -1;
+
+        margin-bottom: 4px;
+    }
+
+    .impact-item {
+        padding-left: 0;
+
+        border-left: 0;
+    }
+
+    .impact-item strong {
+        font-size: 12px;
+    }
+
+
+    /* Seções */
+
+    .section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+
+    /* Sobre */
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .about-image {
+        height: 340px;
+
+        margin-left: 10px;
+    }
+
+    .about-copy {
+        padding-right: 0;
+    }
+
+    .about h2,
+    .join h2 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+
+    /* Missão */
+
+    .mission-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+
+    .mission h2 {
+        font-size: 44px;
+    }
+
+    .mission-inner > p {
+        margin-top: 0;
+    }
+
+    .mission-spark {
+        right: -33px;
+        top: -20px;
+
+        font-size: 150px;
+    }
+
+
+    /* Faça parte */
+
+    .join {
+        padding-top: 60px;
+        padding-bottom: 65px;
+    }
+
+    .join-card {
+        grid-template-columns: 1fr;
+    }
+
+    .join-copy {
+        padding: 42px 28px;
+    }
+
+    .join-card > img {
+        min-height: 260px;
+        height: 260px;
+    }
+
+
+    /* Footer */
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+
+        padding-top: 42px;
+        padding-bottom: 35px;
+    }
+
+    .footer-message {
+        font-size: 22px;
+    }
+
+    .footer-main address {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}

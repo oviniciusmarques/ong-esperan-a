@@ -1,0 +1,478 @@
+/* ==================================================
+   PÁGINA DE PROJETOS
+================================================== */
+
+
+/* --------------------------------------------------
+   NAVEGAÇÃO
+-------------------------------------------------- */
+
+.site-header .nav-links a[href="projetos.html"] {
+    color: var(--green);
+}
+
+
+/* ==================================================
+   HERO — PROJETOS
+================================================== */
+
+.projects-hero {
+    padding: 62px 0 74px;
+    background: #eff0e8;
+}
+
+.projects-hero-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.projects-hero-copy {
+    padding-left: 25px;
+}
+
+.projects-hero h1 {
+    margin: 22px 0 17px;
+    font-family: var(--display);
+    font-size: clamp(48px, 5.5vw, 70px);
+    font-weight: 600;
+    letter-spacing: -3px;
+    line-height: 1.06;
+}
+
+.projects-hero h1 em {
+    color: var(--green);
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.projects-hero-copy > p {
+    max-width: 430px;
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+
+/* --------------------------------------------------
+   IMAGEM DO HERO
+-------------------------------------------------- */
+
+.projects-hero-image {
+    position: relative;
+    height: 420px;
+    margin: 0;
+    padding: 0 0 18px 18px;
+}
+
+.projects-hero-image:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64%;
+    height: 63%;
+    background: #dce6ce;
+    content: '';
+}
+
+.projects-hero-image img {
+    position: relative;
+    z-index: 1;
+    border-radius: 2px 2px 2px 62px;
+    object-position: center 43%;
+}
+
+.projects-hero-image figcaption {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 16px;
+    background: var(--paper);
+    font-size: 10px;
+    font-weight: 600;
+    box-shadow: 0 6px 24px #14261a12;
+}
+
+
+/* ==================================================
+   INTRODUÇÃO DOS PROJETOS
+================================================== */
+
+.projects-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 55px;
+    padding-top: 87px;
+    padding-bottom: 46px;
+}
+
+.projects-intro h2 {
+    margin: 16px 0 0;
+    font-family: var(--display);
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -1.7px;
+    line-height: 1.17;
+}
+
+.projects-intro > p {
+    max-width: 420px;
+    margin: 0 0 3px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+
+/* ==================================================
+   LISTA DE PROJETOS
+================================================== */
+
+.project-list {
+    padding-bottom: 92px;
+}
+
+.project-feature {
+    display: grid;
+    grid-template-columns: 1.04fr 0.96fr;
+    gap: 62px;
+    align-items: center;
+    padding: 31px 0;
+    border-top: 1px solid var(--line);
+}
+
+.project-feature:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* --------------------------------------------------
+   PROJETO INVERTIDO
+-------------------------------------------------- */
+
+.project-reverse .project-photo {
+    order: 2;
+}
+
+.project-reverse .project-info {
+    order: 1;
+    padding-left: 60px;
+}
+
+
+/* --------------------------------------------------
+   IMAGENS DOS PROJETOS
+-------------------------------------------------- */
+
+.project-photo {
+    position: relative;
+    height: 300px;
+}
+
+.project-photo img {
+    border-radius: 2px 47px 2px 2px;
+    object-position: center 45%;
+}
+
+
+/* --------------------------------------------------
+   ÍNDICE DOS PROJETOS
+-------------------------------------------------- */
+
+.project-index {
+    position: absolute;
+    bottom: -14px;
+    left: -14px;
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    border: 4px solid var(--cream);
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-family: var(--serif);
+    font-size: 16px;
+    font-style: italic;
+}
+
+.project-reverse .project-index {
+    right: -14px;
+    left: auto;
+}
+
+
+/* --------------------------------------------------
+   INFORMAÇÕES DOS PROJETOS
+-------------------------------------------------- */
+
+.project-info {
+    padding: 5px 22px 5px 0;
+}
+
+.project-category {
+    display: inline-block;
+    color: #718c57;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.project-info h3 {
+    margin: 13px 0 12px;
+    font-family: var(--display);
+    font-size: clamp(27px, 3vw, 35px);
+    font-weight: 600;
+    letter-spacing: -1.3px;
+    line-height: 1.2;
+}
+
+.project-info p {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+
+/* --------------------------------------------------
+   LINK DO PROJETO
+-------------------------------------------------- */
+
+.project-info > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.project-info > a span {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.project-info > a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ==================================================
+   CHAMADA PARA AÇÃO
+================================================== */
+
+.projects-cta {
+    padding: 64px 0;
+    background: var(--green);
+    color: #fff;
+}
+
+.projects-cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* --------------------------------------------------
+   ELEMENTOS CLAROS DA CHAMADA
+-------------------------------------------------- */
+
+.eyebrow-light {
+    color: #d4e8b2;
+}
+
+.eyebrow-light .eyebrow-line {
+    background: #c7df9a;
+}
+
+.projects-cta h2 {
+    margin: 17px 0 10px;
+    font-family: var(--display);
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 1.16;
+}
+
+.projects-cta p {
+    margin: 0;
+    color: #e1e9e2;
+    font-size: 13px;
+}
+
+
+/* --------------------------------------------------
+   BOTÃO DA CHAMADA
+-------------------------------------------------- */
+
+.projects-cta .button-light {
+    flex: 0 0 auto;
+    border-color: var(--lime);
+    background: var(--lime);
+    color: var(--green-dark);
+}
+
+.projects-cta .button-light:hover {
+    border-color: #e7f5c2;
+    background: #e7f5c2;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE — TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .projects-hero-grid {
+        gap: 35px;
+    }
+
+    .projects-hero-copy {
+        padding-left: 0;
+    }
+
+    .projects-hero-image {
+        height: 370px;
+    }
+
+    .project-feature {
+        gap: 38px;
+    }
+
+    .project-reverse .project-info {
+        padding-left: 20px;
+    }
+
+    .project-photo {
+        height: 270px;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE — CELULAR
+================================================== */
+
+@media (max-width: 640px) {
+
+    /* Hero */
+
+    .projects-hero {
+        padding: 43px 0 48px;
+    }
+
+    .projects-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 31px;
+    }
+
+    .projects-hero h1 {
+        font-size: 52px;
+        letter-spacing: -2.4px;
+    }
+
+    .projects-hero-image {
+        height: 310px;
+        margin-right: 8px;
+        padding-left: 14px;
+    }
+
+    .projects-hero-image figcaption {
+        padding: 11px 12px;
+        font-size: 9px;
+    }
+
+
+    /* Introdução */
+
+    .projects-intro {
+        display: block;
+        padding-top: 62px;
+        padding-bottom: 33px;
+    }
+
+    .projects-intro h2 {
+        font-size: 33px;
+    }
+
+    .projects-intro > p {
+        margin-top: 15px;
+    }
+
+
+    /* Lista de projetos */
+
+    .project-list {
+        padding-bottom: 61px;
+    }
+
+    .project-feature,
+    .project-reverse {
+        grid-template-columns: 1fr;
+        gap: 27px;
+        padding: 25px 0 31px;
+    }
+
+    .project-reverse .project-photo,
+    .project-reverse .project-info {
+        order: initial;
+    }
+
+    .project-reverse .project-info {
+        padding-left: 0;
+    }
+
+    .project-photo {
+        height: 245px;
+        margin: 0 7px 0 10px;
+    }
+
+    .project-index {
+        left: -10px;
+    }
+
+    .project-reverse .project-index {
+        right: -10px;
+    }
+
+    .project-info {
+        padding: 0 1px;
+    }
+
+    .project-info h3 {
+        font-size: 29px;
+    }
+
+
+    /* Chamada para ação */
+
+    .projects-cta {
+        padding: 48px 0;
+    }
+
+    .projects-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .projects-cta h2 {
+        font-size: 37px;
+    }
+
+    .projects-cta .button-light {
+        min-height: 50px;
+    }
+}
